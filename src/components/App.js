@@ -5,56 +5,34 @@ import './App.css';
 
 class App extends React.Component {
   state = {
-    tasks: [
-      {
-        id: 0,
-        text: 'Test',
-        date: '2022-02-15',
-        important: true,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 1,
-        text: 'cTest',
-        date: '2022-02-15',
-        important: true,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 2,
-        text: 'sTest',
-        date: '2022-02-15',
-        important: true,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 3,
-        text: 'aTest',
-        date: '2022-02-16',
-        important: true,
-        active: true,
-        finishDate: null
-      },
-      {
-        id: 4,
-        text: 'eTest',
-        date: '2022-02-17',
-        important: true,
-        active: true,
-        finishDate: null
-      },
-    ]
+    tasks: []
   }
 
   deleteTask = (id) => {
-    console.log(id)
+    const tasks = [...this.state.tasks]
+    const index = tasks.findIndex(task => task.id === id)
+    tasks.splice(index, 1)
+    this.setState({
+      tasks
+    })
+
+    // let tasks = [...this.state.tasks]
+    // tasks = tasks.filter(task => task.id !== id)
   }
+
   changeTaskStatus = (id) => {
-    console.log(id)
+    const tasks = Array.from(this.state.tasks)
+    tasks.forEach(task => {
+      if (task.id === id) {
+        task.active = false
+        task.finishDate = new Date().getTime()
+      }
+    })
+    this.setState({
+      tasks
+    })
   }
+
   render() {
     return (
       <div>
