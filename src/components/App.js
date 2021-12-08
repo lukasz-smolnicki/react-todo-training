@@ -5,7 +5,65 @@ import './App.css';
 
 class App extends React.Component {
   state = {
-    tasks: []
+    tasks: [
+
+      {
+        id: 0,
+        text: 'Test',
+        date: '2022-02-15',
+        important: true,
+        active: true,
+        finishDate: null
+      },
+      {
+        id: 1,
+        text: 'cTest',
+        date: '2022-02-15',
+        important: true,
+        active: true,
+        finishDate: null
+      },
+      {
+        id: 2,
+        text: 'sTest',
+        date: '2022-02-15',
+        important: true,
+        active: true,
+        finishDate: null
+      },
+      {
+        id: 3,
+        text: 'aTest',
+        date: '2022-02-16',
+        important: true,
+        active: true,
+        finishDate: null
+      },
+      {
+        id: 4,
+        text: 'eTest',
+        date: '2022-02-17',
+        important: true,
+        active: true,
+        finishDate: null
+      },
+      {
+        id: 5,
+        text: 'deTest',
+        date: '2022-02-17',
+        important: true,
+        active: true,
+        finishDate: null
+      },
+      {
+        id: 6,
+        text: 'erTest',
+        date: '2022-02-17',
+        important: true,
+        active: true,
+        finishDate: null
+      },
+    ]
   }
 
   deleteTask = (id) => {
