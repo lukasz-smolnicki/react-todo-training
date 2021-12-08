@@ -1,5 +1,4 @@
 import React from 'react';
-import { findRenderedDOMComponentWithClass } from 'react-dom/test-utils';
 
 const Task = (props) => {
 
